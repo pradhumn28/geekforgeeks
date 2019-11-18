@@ -14,7 +14,6 @@ def printList(self):
             temp = temp.next
 
 if __name__ == '__main__':
-    import pdb; pdb.set_trace()
     llist = Linkedlist()
     llist.head = Node(1)
     second = Node(2)
