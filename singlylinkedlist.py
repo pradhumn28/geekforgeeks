@@ -7,8 +7,8 @@ class Linkedlist:
     def __init__(self):
         self.head = None
 
-def printList(self): 
-        temp = self.head 
+def printList(llist): 
+        temp = llist.head 
         while (temp): 
             print(temp.data) 
             temp = temp.next
@@ -19,5 +19,5 @@ if __name__ == '__main__':
     second = Node(2)
     third = Node(3)
     llist.head.next = second
-    second = third
+    second.next = third
     printList(llist)
