@@ -23,6 +23,25 @@ def insertAtEnd(llist, el):
     return llist
 
 
+def insertionAtStart(llist, el):
+    temp = llist.head
+    tempNode = Node(el)
+    llist.head = tempNode
+    llist.head.next = temp
+    return llist
+
+
+def insertionAtNthPosition(llist, el, pos):
+    temp = llist.head
+    tempNode = Node(el)
+    for i in range(pos-1):
+        if not temp:
+            return llist
+        temp = temp.next
+    tempNode1 = temp.next
+    tempNode.next = tempNode1
+    temp.next = tempNode
+    return llist
 
 if __name__ == '__main__':
     llist = Linkedlist()
@@ -32,4 +51,6 @@ if __name__ == '__main__':
     llist.head.next = second
     second.next = third
     llist = insertAtEnd(llist,4)
+    llist = insertionAtStart(llist,5)
+    llist = insertionAtNthPosition(llist,6,2)
     printList(llist)
